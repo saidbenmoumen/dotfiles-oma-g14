@@ -28,8 +28,7 @@
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
 
-
--- Overrides
+-- Omarchy Menus
 hl.unbind("SUPER + SPACE")
 o.bind("CTRL + SPACE", "Omarchy menu", "omarchy-menu toggle root")
 
@@ -38,7 +37,14 @@ o.bind("ALT + SPACE", "Apps menu", "omarchy-menu toggle apps")
 
 -- Grouping
 for index = 1, 5 do
-
-  hl.unbind("SUPER + ALT + code:" .. tostring(index + 9))
-  o.bind("ALT + code:" .. tostring(index + 9), "Switch to group window " .. index, hl.dsp.group.active({ index = index }))
+	hl.unbind("SUPER + ALT + code:" .. tostring(index + 9))
+	o.bind(
+		"ALT + code:" .. tostring(index + 9),
+		"Switch to group window " .. index,
+		hl.dsp.group.active({ index = index })
+	)
 end
+
+-- previously: Music
+hl.unbind("SUPER + SHIFT + M")
+o.bind("SUPER + SHIFT + M", "Omarchy Spotify", "omarchy shell -q quickshell.spotify.player togglePlayer")
