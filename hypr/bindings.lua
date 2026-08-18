@@ -48,3 +48,5 @@ end
 -- previously: Music
 hl.unbind("SUPER + SHIFT + M")
 o.bind("SUPER + SHIFT + M", "Omarchy Spotify", "omarchy shell -q quickshell.spotify.player togglePlayer")
+
+o.bind("SUPER + R", "VoxType Start", "voxtype record toggle")
