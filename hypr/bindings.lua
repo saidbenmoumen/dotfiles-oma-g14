@@ -87,3 +87,10 @@ hl.unbind("SUPER + SHIFT + M")
 o.bind("SUPER + SHIFT + M", "Omarchy Spotify", "omarchy shell -q quickshell.spotify.player togglePlayer")
 
 o.bind("SUPER + R", "VoxType Start", "voxtype record toggle")
+
+-- DeckShift — reclaim SUPER+SHIFT+S from the Omarchy default, bind Gaming Mode
+hl.unbind("SUPER + SHIFT + S")
+o.bind("SUPER + SHIFT + S", "Gaming Mode", "/usr/local/bin/switch-to-gaming")
+
+-- DeckShift — toggle the Gaming Mode control panel
+o.bind("SUPER + ALT + G", "Gaming Mode panel", "omarchy-shell shell toggle nosignal.deckshift")
