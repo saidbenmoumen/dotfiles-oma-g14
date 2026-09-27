@@ -54,6 +54,19 @@ hl.device({
   kb_options = "compose:ralt"
 })
 
+-- The Q2 Max exposes different device names when connected directly.
+for _, name in ipairs({
+  "keychron-keychron-q2-max",
+  "keychron-keychron-q2-max-keyboard",
+  "keychron-keychron-q2-max-system-control",
+  "keychron-keychron-q2-max-consumer-control",
+}) do
+  hl.device({
+    name = name,
+    kb_options = "compose:ralt"
+  })
+end
+
 -- App-specific touchpad scroll speeds.
 -- o.window("(Alacritty|kitty|foot)", { scroll_touchpad = 1.5 })
 -- o.window("com.mitchellh.ghostty", { scroll_touchpad = 0.2 })
