@@ -4,67 +4,60 @@
 -- Keyboard layout and options.
 -- See https://wiki.hypr.land/Configuring/Basics/Variables/#input
 hl.config({
-  input = {
-    --     -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt.
-    --     kb_layout = "us,dk,eu",
-    kb_options = "compose:ralt,caps:swapescape",
-    --
-    --     -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
-    --     kb_variant = "intl",
-    --
-    --     -- Change speed of keyboard repeat.
-    --     repeat_rate = 40,
-    --     repeat_delay = 250,
-    --
-    --     -- Start with numlock on by default.
-    --     numlock_by_default = true,
-    --
-    --     -- Increase sensitivity for mouse/trackpad (default: 0).
-    --     sensitivity = 0.35,
-    --
-    --     -- Turn off mouse acceleration (default: adaptive).
-    --     accel_profile = "flat",
-    --
-    touchpad = {
-      -- Use natural (inverse) scrolling.
-      natural_scroll = true,
-      --
-      --       -- Use two-finger clicks for right-click instead of lower-right corner.
-      --       clickfinger_behavior = true,
-      --
-      --       -- Control the speed of your scrolling.
-      --       scroll_factor = 0.4,
-      --
-      --       -- Enable the touchpad while typing.
-      --       disable_while_typing = false,
-      --
-      --       -- Left-click-and-drag with three fingers.
-      --       drag_3fg = 1,
-    },
-  },
-})
-
-hl.device({
-  name = "kinesis-kinesis-adv360",
-  kb_options = "compose:ralt"
-})
-
-hl.device({
-  name = "keychron--keychron-link--keyboard",
-  kb_options = "compose:ralt"
+	input = {
+		--     -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt.
+		--     kb_layout = "us,dk,eu",
+		kb_options = "compose:ralt,caps:swapescape",
+		--
+		--     -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
+		--     kb_variant = "intl",
+		--
+		--     -- Change speed of keyboard repeat.
+		--     repeat_rate = 40,
+		--     repeat_delay = 250,
+		--
+		--     -- Start with numlock on by default.
+		--     numlock_by_default = true,
+		--
+		--     -- Increase sensitivity for mouse/trackpad (default: 0).
+		--     sensitivity = 0.35,
+		--
+		--     -- Turn off mouse acceleration (default: adaptive).
+		--     accel_profile = "flat",
+		--
+		touchpad = {
+			-- Use natural (inverse) scrolling.
+			natural_scroll = true,
+			--
+			--       -- Use two-finger clicks for right-click instead of lower-right corner.
+			--       clickfinger_behavior = true,
+			--
+			--       -- Control the speed of your scrolling.
+			--       scroll_factor = 0.4,
+			--
+			--       -- Enable the touchpad while typing.
+			--       disable_while_typing = false,
+			--
+			--       -- Left-click-and-drag with three fingers.
+			--       drag_3fg = 1,
+		},
+	},
 })
 
 -- The Q2 Max exposes different device names when connected directly.
 for _, name in ipairs({
-  "keychron-keychron-q2-max",
-  "keychron-keychron-q2-max-keyboard",
-  "keychron-keychron-q2-max-system-control",
-  "keychron-keychron-q2-max-consumer-control",
+	"kinesis-kinesis-adv360",
+	"kinesis-kinesis-adv360-1",
+	"keychron--keychron-link--keyboard",
+	"keychron-keychron-q2-max",
+	"keychron-keychron-q2-max-keyboard",
+	"keychron-keychron-q2-max-system-control",
+	"keychron-keychron-q2-max-consumer-control",
 }) do
-  hl.device({
-    name = name,
-    kb_options = "compose:ralt"
-  })
+	hl.device({
+		name = name,
+		kb_options = "compose:ralt",
+	})
 end
 
 -- App-specific touchpad scroll speeds.
