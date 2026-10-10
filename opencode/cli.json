@@ -1,12 +1,19 @@
 {
   "$schema": "https://opencode.ai/v2/cli.json",
   "diffs": {
-    "wrap": "word"
+    "wrap": "word",
+    "view": "auto"
   },
   "session": {
     "sidebar": "auto",
     "scrollbar": false,
-    "thinking": "hide"
+    "thinking": "hide",
+    "permissions": "autoaccept"
   },
-  "animations": true
+  "animations": true,
+  "tabs": {
+    "mode": "auto",
+    "scope": "cwd",
+    "indicators": "status"
+  }
 }
