@@ -20,6 +20,7 @@ require("hypr.monitors")
 require("hypr.input")
 require("hypr.bindings")
 require("hypr.looknfeel")
+require("hypr.appearance")
 require("hypr.autostart")
 
 -- Toggle config flags dynamically.
