@@ -15,5 +15,8 @@
     "mode": "auto",
     "scope": "cwd",
     "indicators": "status"
+  },
+  "theme": {
+    "name": "system"
   }
 }

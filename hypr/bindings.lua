@@ -86,4 +86,14 @@ end
 hl.unbind("SUPER + SHIFT + M")
 o.bind("SUPER + SHIFT + M", "Omarchy Spotify", "omarchy shell -q quickshell.spotify.player togglePlayer")
 
-o.bind("SUPER + R", "VoxType Start", "voxtype record toggle")
+-- Replace the default Copilot key binding (Omarchy menu) with Hex dictation.
+hl.unbind("SUPER + SHIFT + code:201")
+o.bind("SUPER + SHIFT + code:201", "Hex Dictation Toggle", "hex dictation toggle")
+
+
+-- Dictation keys from before Alt + Space and Right Alt became the defaults.
+-- Remove these lines to give the keys back to applications.
+if o.dictation_installed and o.dictation_installed() then
+  o.bind("SUPER + CTRL + X", "Toggle dictation", "omarchy-dictation toggle")
+  o.bind_hold("F9", "Start dictation (push-to-talk)", "omarchy-dictation start", "Stop dictation (push-to-talk)", "omarchy-dictation stop")
+end
